@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
+    [SerializeField] private GameObject Bedroom;
     [SerializeField] private float Timer;
     [SerializeField] private float Delay;
     [SerializeField] private CatList catList;
-    [SerializeField] private bool isDone = false;   
-    [SerializeField] private bool isSelected = false;
     void Start()
     {
         catList = this.GetComponent<CatList>();
@@ -18,23 +17,14 @@ public class Spawn : MonoBehaviour
     {
         catList.GetCat();
 
-        if (!isSelected)
-        {
-            //Delay = Random.Range(20, 61);
-            Delay = 5;
-            isSelected = true;
-        }
-
-        if (Timer < Delay && !isDone)
+        if (Timer < Delay )
         {
             Timer += Time.deltaTime;
         }
-        else if (!isDone)
+        else
         {
-            catList.SpawnCat();
+            catList.SpawnCat(Bedroom);
             Timer = 0;
-            isDone = true;
-            isSelected = false;
         }
     }
 }

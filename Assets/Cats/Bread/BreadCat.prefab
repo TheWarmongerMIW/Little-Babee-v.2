@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6797497845685401119}
   - component: {fileID: 1981686158592678038}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 549236334479171401}
   - component: {fileID: 2729077459576749231}
   - component: {fileID: 4836405881596390565}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BreadCat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,3 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 2
+  timeStart: 0
+  timeEnd: 0
+  currentState: 
+  animator: {fileID: 0}

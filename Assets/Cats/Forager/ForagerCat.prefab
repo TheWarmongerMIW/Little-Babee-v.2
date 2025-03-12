@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2993302896731558386}
   - component: {fileID: 1267297883887063256}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 3322138112629747521}
   - component: {fileID: 3713618656441414480}
   - component: {fileID: 3643913247079090362}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ForagerCat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,3 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 5
+  timeStart: 0
+  timeEnd: 0
+  currentState: 
+  animator: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4077404216738434194}
   - component: {fileID: 1119745274609984747}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 7186458889376701712}
   - component: {fileID: 5639443334336108752}
   - component: {fileID: 5315750915243132676}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DangoCat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,3 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 3
+  timeStart: 0
+  timeEnd: 0
+  currentState: 
+  animator: {fileID: 0}

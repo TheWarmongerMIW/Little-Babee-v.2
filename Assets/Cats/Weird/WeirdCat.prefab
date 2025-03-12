@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1749347700214905880}
   - component: {fileID: 6281179748382002316}
   - component: {fileID: 1672445940029968954}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WeirdCat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,6 +195,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 9
+  timeStart: 0
+  timeEnd: 0
+  currentState: 
+  animator: {fileID: 0}
 --- !u!1 &4358607457554580718
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5987711591525576705}
   - component: {fileID: 426292011929503156}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

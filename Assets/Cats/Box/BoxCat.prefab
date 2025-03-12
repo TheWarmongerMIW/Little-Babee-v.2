@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2066699818078119492}
   - component: {fileID: 5825951560985995719}
   - component: {fileID: 5368629921114105392}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BoxCat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,9 +194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0156db9e5d4f949b83e80e63e820c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 0
+  spawnRate: 10
   timeStart: 0
   timeEnd: 0
+  currentState: 
+  animator: {fileID: 0}
 --- !u!1 &5609937690470838962
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4199356680096441284}
   - component: {fileID: 6595659429191354351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

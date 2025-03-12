@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Cat: MonoBehaviour
+public class Cat: MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] public int spawnRate;
     [SerializeField] public int timeStart;
@@ -25,5 +26,17 @@ public class Cat: MonoBehaviour
         if (currentState == newState) return;
         currentState = newState;
         animator.Play(currentState);
+    }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
+    }
+    private void AddPhysics2DRaycaster()
+    {
+        Physics2DRaycaster physicsRaycaster = FindObjectOfType<Physics2DRaycaster>();
+        if (physicsRaycaster == null)
+        {
+            Camera.main.gameObject.AddComponent<Physics2DRaycaster>();
+        }
     }
 }

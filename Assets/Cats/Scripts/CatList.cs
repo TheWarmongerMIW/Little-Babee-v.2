@@ -27,13 +27,27 @@ public class CatList : MonoBehaviour
 
         return Cats[0];
     }
-    public void SpawnCat()
+    public List<GameObject> GetCatList()
     {
-        //GameObject cat = GetCat();  
+        List<GameObject> selectedCatList = new List<GameObject>();
+        int hour = System.DateTime.Now.Hour;
+
+        foreach (var cat in Cats)
+        {
+            //if (hour >= cat.GetComponent<Cat>().timeStart && hour <= cat.GetComponent<Cat>().timeEnd) selectedCatList.Add(cat); 
+            if (hour < cat.GetComponent<Cat>().spawnRate) selectedCatList.Add(cat);
+        }
+
+        return selectedCatList; 
+    }
+    public void SpawnCat(GameObject Bedroom)
+    {
+        GameObject cat = GetCat();  
         //int hour = System.DateTime.Now.Hour;    
 
         //if (hour >= cat.GetComponent<Cat>().timeStart && hour <= cat.GetComponent<Cat>().timeEnd) Instantiate(GetCat(), transform.position, transform.rotation);
         
-        Instantiate(GetCat(), transform.position, transform.rotation);
+        //GameObject cat = Instantiate(GetCat(), transform.position, transform.rotation);
+        cat.transform.SetParent(Bedroom.transform);
     }
 }

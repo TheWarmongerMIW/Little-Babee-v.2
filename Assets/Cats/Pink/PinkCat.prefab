@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 3953714500113389449}
   - component: {fileID: 7422419872420964073}
   - component: {fileID: 1746079813958562631}
+  - component: {fileID: 729150350551898892}
   m_Layer: 3
   m_Name: PinkCat
   m_TagString: Cat
@@ -265,3 +266,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &729150350551898892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3652331784532289326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb0f8b1ee92e7c45a86cfb22f206e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 12
+  timeStart: 0
+  timeEnd: 0
+  currentState: 
+  animator: {fileID: 0}
