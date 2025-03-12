@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4383495694244255265}
   - component: {fileID: 169012095442027227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 8688467399595507400}
   - component: {fileID: -5073747361866006498}
   - component: {fileID: 6045576579225633891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AngelCat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,4 +280,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 1
   timeStart: 21
-  timeEnd: 23
+  timeEnd: 0
+  currentState: 
+  animator: {fileID: 0}

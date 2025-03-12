@@ -18,20 +18,22 @@ public class CatList : MonoBehaviour
 
         //return null;
 
-        int hour = System.DateTime.Now.Hour;    
+        //int hour = System.DateTime.Now.Hour;    
 
-        foreach (var cat in Cats)
-        {
-            if (hour >= cat.GetComponent<Cat>().timeStart && hour <= cat.GetComponent<Cat>().timeEnd) return cat;
-        }
+        //foreach (var cat in Cats)
+        //{
+        //    if (hour >= cat.GetComponent<Cat>().timeStart && hour <= cat.GetComponent<Cat>().timeEnd) return cat;
+        //}
 
         return Cats[0];
     }
     public void SpawnCat()
     {
-        GameObject cat = GetCat();  
-        int hour = System.DateTime.Now.Hour;    
+        //GameObject cat = GetCat();  
+        //int hour = System.DateTime.Now.Hour;    
 
-        if (hour >= cat.GetComponent<Cat>().timeStart && hour <= cat.GetComponent<Cat>().timeEnd) Instantiate(GetCat(), transform.position, transform.rotation);
+        //if (hour >= cat.GetComponent<Cat>().timeStart && hour <= cat.GetComponent<Cat>().timeEnd) Instantiate(GetCat(), transform.position, transform.rotation);
+        
+        Instantiate(GetCat(), transform.position, transform.rotation);
     }
 }

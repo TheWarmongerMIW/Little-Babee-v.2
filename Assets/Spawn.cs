@@ -8,7 +8,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] private float Delay;
     [SerializeField] private CatList catList;
     [SerializeField] private bool isDone = false;   
-    [SerializeField] private bool isSelected = false;   
+    [SerializeField] private bool isSelected = false;
     void Start()
     {
         catList = this.GetComponent<CatList>();
@@ -20,7 +20,8 @@ public class Spawn : MonoBehaviour
 
         if (!isSelected)
         {
-            Delay = Random.Range(20, 61);
+            //Delay = Random.Range(20, 61);
+            Delay = 5;
             isSelected = true;
         }
 

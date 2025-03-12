@@ -416,25 +416,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3681721514179323351, guid: d9ae6804f9f4f9c4081f7de1cbbed781, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045576579225633891, guid: d9ae6804f9f4f9c4081f7de1cbbed781, type: 3}
-      propertyPath: timeEnd
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8218897324461050191, guid: d9ae6804f9f4f9c4081f7de1cbbed781, type: 3}
       propertyPath: m_Name
       value: AngelCat
-      objectReference: {fileID: 0}
-    - target: {fileID: 8218897324461050191, guid: d9ae6804f9f4f9c4081f7de1cbbed781, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8218897324461050191, guid: d9ae6804f9f4f9c4081f7de1cbbed781, type: 3}
-      propertyPath: m_TagString
-      value: Cat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
