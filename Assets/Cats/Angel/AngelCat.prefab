@@ -278,8 +278,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba36a51599b48b0419531456d104fe7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
-  timeStart: 21
-  timeEnd: 0
-  currentState: 
-  animator: {fileID: 0}
+  cat: {fileID: 11400000, guid: 1141ecc4ebdfeb34fb2e8b92d3c44a67, type: 2}
