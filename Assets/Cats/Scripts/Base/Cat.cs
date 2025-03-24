@@ -13,6 +13,7 @@ public class Cat : MonoBehaviour, IPointerDownHandler
     [SerializeField] private Animator animator;
     [SerializeField] private string currentState;
     [SerializeField] private bool isChanging = false;
+    [SerializeField] protected bool hasToChange = false;
 
     [Header("Cat stay time")]
     [SerializeField] private float stayTime;
@@ -45,7 +46,7 @@ public class Cat : MonoBehaviour, IPointerDownHandler
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick"))
         {
             if (animator.HasState(0, Animator.StringToHash("OnEnter"))) ToOnEnter();
-            else ChangeAnim("Idle");  
+            else ChangeAnim("Idle");
         }
     }
     private void AddPhysics2DRaycaster()
@@ -65,22 +66,24 @@ public class Cat : MonoBehaviour, IPointerDownHandler
         animator.Play(newState);
         currentState = newState;
     }
-    private void ChangeToIdle()
-    {
-        float time = animator.GetCurrentAnimatorStateInfo(0).length;
-        time -= Time.deltaTime;
-        if (time <= 0) ChangeAnim("Idle");
-    }
     private IEnumerator ToIdle()
     {
         isChanging = true;
 
-        if (animator.HasState(0,Animator.StringToHash("OnEnter")))
+        if (animator.HasState(0, Animator.StringToHash("OnEnter")))
         {
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnEnter"))
             {
                 yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
                 ChangeAnim("Idle");
+            }
+            else if (hasToChange)
+            {
+                if(animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick"))
+        {
+                    yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+                    ToOnEnter();
+                }
             }
         }
         else
@@ -102,46 +105,5 @@ public class Cat : MonoBehaviour, IPointerDownHandler
     {
         ChangeAnim("OnEnter");
     }
-    #endregion
-
-    #region Test
-
-    //private void ToOnClick()
-    //{
-    //    if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-    //    {
-    //        ChangeAnim(ONCLICK);
-    //    } 
-    //}
-    //private void ToOnEnter()
-    //{
-    //    if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick"))
-    //    {
-    //        ChangeAnim(ONENTER);
-    //    }
-    //}
-    //private IEnumerator ToIdle()
-    //{
-    //    isTransitioning = true;
-
-    //    if (animator.HasState(0, Animator.StringToHash(ONENTER)))
-    //    {
-    //        if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnEnter"))
-    //        {
-    //            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-    //            ChangeAnim(IDLE);
-    //        }
-    //    } 
-    //    else 
-    //    {
-    //        if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick"))
-    //        {
-    //            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-    //            ChangeAnim(IDLE);
-    //        }
-    //    }
-
-    //    isTransitioning = false;    
-    //}
     #endregion
 }

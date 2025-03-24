@@ -6,8 +6,11 @@ using UnityEngine.EventSystems;
 [CreateAssetMenu]
 public class ScriptableCat : ScriptableObject
 {
+    [Header("Schedule")]
     public float timeIn;
     public float timeOut;
+
+    [Header("Cat sound")]
     public AudioClip catSound1;
     public AudioClip catSound2;
     public AudioClip catSound3;

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Gideon : Cat
 {
-
+    public Gideon()
+    {
+        hasToChange = true;
+    }
 }
