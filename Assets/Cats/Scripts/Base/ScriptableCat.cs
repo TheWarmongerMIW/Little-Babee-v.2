@@ -9,6 +9,7 @@ public class ScriptableCat : ScriptableObject
     [Header("Schedule")]
     public float timeIn;
     public float timeOut;
+    public float spawnRate;
 
     [Header("Cat sound")]
     public AudioClip catSound1;

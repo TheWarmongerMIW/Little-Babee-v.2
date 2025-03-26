@@ -10,13 +10,13 @@ using UnityEngine.XR;
 public class Cat : MonoBehaviour, IPointerDownHandler
 {
     [Header("Animation")]
-    [SerializeField] private Animator animator;
-    [SerializeField] private string currentState;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected string currentState;
     [SerializeField] protected bool isChanging = false;
     [SerializeField] protected bool hasToChange = false;
 
     [Header("Cat stay time")]
-    [SerializeField] private float stayTime;
+    [SerializeField] protected float stayTime;
 
     [Header("Scriptable Cat")]
     public ScriptableCat cat;

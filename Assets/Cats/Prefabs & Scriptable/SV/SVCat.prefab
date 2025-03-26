@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7895648466340411861}
   - component: {fileID: 5980224049685324858}
   - component: {fileID: 6090796292676504801}
-  - component: {fileID: -5988093484034864398}
+  - component: {fileID: 7039256632883429480}
   m_Layer: 3
   m_Name: SVCat
   m_TagString: Cat
@@ -181,7 +181,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-5988093484034864398
+--- !u!114 &7039256632883429480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,10 +190,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5071277348753535519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 460156ffe39018844a551468cd7cbd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: 84410008d3a7153449d8770b134d8833, type: 2}

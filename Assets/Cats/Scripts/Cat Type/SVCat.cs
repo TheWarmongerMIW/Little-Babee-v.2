@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class SVCat: Cat
 {
+    public SVCat()
+    {
+        hasToChange = false;
 
+        //Find new animation
+    }
 }
