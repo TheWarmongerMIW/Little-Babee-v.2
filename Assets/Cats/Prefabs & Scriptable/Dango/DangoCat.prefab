@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3127014548258296124}
   - component: {fileID: 7186458889376701712}
   - component: {fileID: 5639443334336108752}
-  - component: {fileID: 2466641440821318322}
+  - component: {fileID: 3386172246456675370}
   m_Layer: 3
   m_Name: DangoCat
   m_TagString: Cat
@@ -266,7 +266,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2466641440821318322
+--- !u!114 &3386172246456675370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,10 +275,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8023839016721748946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cd6bebb8ba60cc46af170a3db18e4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: bb23932b6cf53134788ab116b9971dea, type: 2}

@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5376581079973254984}
   - component: {fileID: 3322138112629747521}
   - component: {fileID: 3713618656441414480}
-  - component: {fileID: -458739977674500662}
+  - component: {fileID: 5007284206937094091}
   m_Layer: 3
   m_Name: ForagerCat
   m_TagString: Cat
@@ -266,7 +266,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-458739977674500662
+--- !u!114 &5007284206937094091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,10 +275,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8821144528452189346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: ae981a15b31d5584e996cca91658a0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: f79c2b1000785fb4abba3f55f16bb360, type: 2}

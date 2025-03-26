@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3953714500113389449}
   - component: {fileID: 7422419872420964073}
   - component: {fileID: 1746079813958562631}
-  - component: {fileID: 7200133561005781474}
+  - component: {fileID: 6475969600525190077}
   m_Layer: 3
   m_Name: PinkCat
   m_TagString: Cat
@@ -266,7 +266,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7200133561005781474
+--- !u!114 &6475969600525190077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,10 +275,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3652331784532289326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4eb0f8b1ee92e7c45a86cfb22f206e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: f7e892b8d3924754692c753e0801869c, type: 2}
+  boxCollider: {fileID: 7422419872420964073}

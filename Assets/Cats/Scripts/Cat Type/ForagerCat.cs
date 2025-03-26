@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForagerCat : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+public class ForagerCat : Cat
+{ 
+    public ForagerCat()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        hasToChange = false;
     }
 }

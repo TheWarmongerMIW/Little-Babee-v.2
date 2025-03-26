@@ -4,4 +4,8 @@ using UnityEngine;
 
 public class DuchessCat : Cat
 {
+    public DuchessCat()
+    {
+        hasToChange = true;
+    }    
 }

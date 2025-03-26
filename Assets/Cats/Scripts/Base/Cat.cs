@@ -12,7 +12,7 @@ public class Cat : MonoBehaviour, IPointerDownHandler
     [Header("Animation")]
     [SerializeField] private Animator animator;
     [SerializeField] private string currentState;
-    [SerializeField] private bool isChanging = false;
+    [SerializeField] protected bool isChanging = false;
     [SerializeField] protected bool hasToChange = false;
 
     [Header("Cat stay time")]
@@ -39,13 +39,17 @@ public class Cat : MonoBehaviour, IPointerDownHandler
     }
 
     #region Click 
-    public void OnPointerDown(PointerEventData eventData)
+    public virtual void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
+
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) ToOnClick();
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick"))
         {
-            if (animator.HasState(0, Animator.StringToHash("OnEnter"))) ToOnEnter();
+            if (animator.HasState(0, Animator.StringToHash("OnEnter")))
+            {
+                if (!hasToChange) ToOnEnter();
+            }
             else ChangeAnim("Idle");
         }
     }
@@ -79,7 +83,7 @@ public class Cat : MonoBehaviour, IPointerDownHandler
             }
             else if (hasToChange)
             {
-                if(animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick"))
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick"))
         {
                     yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
                     ToOnEnter();

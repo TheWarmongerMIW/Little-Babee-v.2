@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1103556996406415773}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.021, y: -0.11, z: 0}
+  m_LocalPosition: {x: -0.054, y: -0.105, z: 0}
   m_LocalScale: {x: 1.0707, y: 1.0707, z: 1.0707}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7895122520116186479}
   - component: {fileID: 6491284055273747313}
   - component: {fileID: 6857603380350679631}
-  - component: {fileID: 1900031992429770984}
+  - component: {fileID: 5432190794988421979}
   m_Layer: 3
   m_Name: OrangeCat
   m_TagString: Cat
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3846154, y: 0.5538462}
+  m_Size: {x: 0.26, y: 0.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -236,8 +236,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32307693, y: 0.5538462}
-    newSize: {x: 0.3846154, y: 0.5538462}
+    oldSize: {x: 0.4, y: 0.5538462}
+    newSize: {x: 0.26, y: 0.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -266,7 +266,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1900031992429770984
+--- !u!114 &5432190794988421979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,10 +275,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144939850258319696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 61d81a24d487d4d4c93797d73a1e05c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: 04b80e2e83829b344b28a7a0f0e7e4e1, type: 2}
+  boxCollider: {fileID: 0}

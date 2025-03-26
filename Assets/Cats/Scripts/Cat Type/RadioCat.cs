@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class RadioCat : Cat
 {
-    // Start is called before the first frame update
-    void Start()
+    public RadioCat()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        hasToChange = true;
     }
 }

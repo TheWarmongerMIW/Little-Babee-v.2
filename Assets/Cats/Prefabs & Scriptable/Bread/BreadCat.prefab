@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 549236334479171401}
   - component: {fileID: 2729077459576749231}
   - component: {fileID: -2246801042739675272}
+  - component: {fileID: 688112630209651544}
   m_Layer: 3
   m_Name: BreadCat
   m_TagString: Cat
@@ -273,12 +274,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909906368125594568}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 0
+  stayTime: 0
+  cat: {fileID: 11400000, guid: e0a48eab4946d2b489c3090f348539db, type: 2}
+--- !u!114 &688112630209651544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909906368125594568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4cdbdb07bca1e4d9d25f04acdc29af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: e0a48eab4946d2b489c3090f348539db, type: 2}

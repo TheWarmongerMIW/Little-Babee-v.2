@@ -26,7 +26,7 @@ public class SpawnController : MonoBehaviour
 
     void Start()
     {
-        cooldown = /*Random.Range(30,241);*/ 0;
+        cooldown = Random.Range(30,241);;
         time = System.DateTime.Now.Hour;  
     }
     void Update()

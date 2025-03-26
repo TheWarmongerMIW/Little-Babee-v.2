@@ -279,8 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  OnEnter: {fileID: 7400000, guid: 975a968d4c8172945bd65ac2beb26012, type: 2}
-  NewIdle: {fileID: 7400000, guid: 7e308526daa89a546854a749b381825a, type: 2}
-  OnClick: {fileID: 7400000, guid: ae125870befa2af43a23e7768a777a0d, type: 2}
+  currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
-  cat: {fileID: 0}
+  cat: {fileID: 11400000, guid: 2a35bb2f41d638d4c8c793bf0e900c5d, type: 2}

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class DangoCat : Cat
 {
-
+    public DangoCat()
+    {
+        hasToChange = false;
+    }
 }

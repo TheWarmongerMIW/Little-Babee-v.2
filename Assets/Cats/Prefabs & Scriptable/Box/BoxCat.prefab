@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8329481320922674865}
   - component: {fileID: 2066699818078119492}
   - component: {fileID: 5825951560985995719}
-  - component: {fileID: -659071443560163060}
+  - component: {fileID: 1679243737081733760}
   m_Layer: 3
   m_Name: BoxCat
   m_TagString: Cat
@@ -182,7 +182,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-659071443560163060
+--- !u!114 &1679243737081733760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,11 +191,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4153157327528460541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b0156db9e5d4f949b83e80e63e820c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: 477008f6d0fb97e4db1c573a13f9f044, type: 2}
 --- !u!1 &5609937690470838962

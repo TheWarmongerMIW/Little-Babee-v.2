@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2792589596127008716}
   - component: {fileID: 8688467399595507400}
   - component: {fileID: -5073747361866006498}
-  - component: {fileID: -3483088634206927985}
+  - component: {fileID: 782097658751158526}
   m_Layer: 3
   m_Name: AngelCat
   m_TagString: Cat
@@ -266,7 +266,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-3483088634206927985
+--- !u!114 &782097658751158526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,10 +275,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8218897324461050191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: ba36a51599b48b0419531456d104fe7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: 1141ecc4ebdfeb34fb2e8b92d3c44a67, type: 2}

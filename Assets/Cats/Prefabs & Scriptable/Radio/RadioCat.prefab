@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6639360845567151934}
   - component: {fileID: 665167594287032992}
   - component: {fileID: 6632132325244204726}
-  - component: {fileID: -631665679012624795}
+  - component: {fileID: 8482049832438363500}
   m_Layer: 3
   m_Name: RadioCat
   m_TagString: Cat
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.29, y: 0.19}
+  m_Size: {x: 0.33, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -237,7 +237,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.48333332, y: 0.31666666}
-    newSize: {x: 0.29, y: 0.19}
+    newSize: {x: 0.33, y: 0.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -266,7 +266,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-631665679012624795
+--- !u!114 &8482049832438363500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,10 +275,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4351238779705147771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0171713c20ac4c8df1a5d2234c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 81682ebbe064c1f4abda04ffb908e141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   currentState: 
+  isChanging: 0
+  hasToChange: 1
   stayTime: 0
   cat: {fileID: 11400000, guid: 582599774a873cd44870aa86cfa94b47, type: 2}
