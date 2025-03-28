@@ -20,8 +20,9 @@ public class Cat : MonoBehaviour, IPointerDownHandler
 
     [Header("Scriptable Cat")]
     public ScriptableCat cat;
+    public bool hasFound = false;
 
-    private void Awake()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         stayTime = UnityEngine.Random.Range(60, 181);

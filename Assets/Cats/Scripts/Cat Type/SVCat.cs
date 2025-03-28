@@ -10,4 +10,8 @@ public class SVCat: Cat
 
         //Find new animation
     }
+    private void Awake()
+    {
+        hasFound = true;
+    }
 }
