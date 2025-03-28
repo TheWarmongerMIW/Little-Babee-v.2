@@ -19,6 +19,8 @@ public class SpawnController : MonoBehaviour
 
     [Header("Other")]
     [SerializeField] private GameObject Bedroom;
+    [SerializeField] private CatManager catManager;
+    [SerializeField] private SaveManager saveManager;
     [SerializeField] private float cooldown = 0;
     [SerializeField] private float time = 0;
 
@@ -26,7 +28,9 @@ public class SpawnController : MonoBehaviour
 
     void Start()
     {
-        cooldown = Random.Range(30,241);;
+        cooldown = /*Random.Range(30,241)*/ 0;
+        catManager = GameObject.Find("Cat Manager").GetComponent<CatManager>();    
+        saveManager = GameObject.Find("Save Manager").GetComponent<SaveManager>();
         time = System.DateTime.Now.Hour;  
     }
     void Update()
@@ -68,13 +72,16 @@ public class SpawnController : MonoBehaviour
             if (chosenCats.Count == 0) return;
             else
             {
+
                 int randomCat = Random.Range(0, chosenCats.Count);
 
                 if (chosenSpawn.GetComponent<Spawn>().cat == null)
                 {
                     GameObject chosenCat = Instantiate(chosenCats[randomCat], chosenSpawn.transform.position, chosenSpawn.transform.rotation);
+                    catManager.AddCatToList(chosenCat);
+                    saveManager.SaveCat();
                     chosenCat.transform.SetParent(Bedroom.transform);
-
+                    
                     chosenSpawn.GetComponent<Spawn>().cat = chosenCat;
                     chosenSpawn = null;
                 }

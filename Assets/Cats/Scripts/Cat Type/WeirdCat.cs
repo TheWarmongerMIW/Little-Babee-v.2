@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class WeirdCat: Cat
 {
     [Header("Weird Cat section")]
-    [SerializeField] private List<Sprite> spriteList = new List<Sprite>();
     [SerializeField] private SpriteRenderer spriteRenderer;
     public WeirdCat()
     {

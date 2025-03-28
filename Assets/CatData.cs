@@ -6,15 +6,13 @@ using UnityEngine;
 [System.Serializable]
 public class CatData
 {
-    public bool hasFound;
-    public float[] position;
+    public List<string> catNames = new List<string>();   
 
-    public CatData(Cat cat)
+    public CatData(CatManager catManager)
     {
-        this.hasFound = cat.hasFound;
-
-        this.position[0] = cat.transform.position.x;
-        this.position[1] = cat.transform.position.y;
-        this.position[2] = cat.transform.position.z;
+        foreach (var cat in catManager.catNames)
+        {
+            this.catNames.Add(cat);   
+        }
     }
 }
