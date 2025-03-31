@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff1f38e6cc9c114eb4234bb7b79d1b9, type: 3}
   m_Name: Radio Cat
   m_EditorClassIdentifier: 
-  timeIn: 10
-  timeOut: 13
-  audioClip: {fileID: 0}
+  spawnRate: 5
+  catSound1: {fileID: 0}
+  catSound2: {fileID: 0}
+  catSound3: {fileID: 0}

@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff1f38e6cc9c114eb4234bb7b79d1b9, type: 3}
   m_Name: Angel Cat
   m_EditorClassIdentifier: 
-  timeIn: 16
-  timeOut: 24
-  spawnRate: 0
+  spawnRate: 25
   catSound1: {fileID: 0}
   catSound2: {fileID: 0}
   catSound3: {fileID: 0}

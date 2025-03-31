@@ -22,30 +22,33 @@ public class SpawnController : MonoBehaviour
     [SerializeField] private CatManager catManager;
     [SerializeField] private SaveManager saveManager;
     [SerializeField] private float cooldown = 0;
-    [SerializeField] private float time = 0;
+    [SerializeField] private float randomNum = 0;
 
     private bool isDone = false;
 
     void Start()
     {
         cooldown = Random.Range(30, 241);
+        randomNum = Random.Range(1, 101);
         catManager = GameObject.Find("Cat Manager").GetComponent<CatManager>();    
         saveManager = GameObject.Find("Save Manager").GetComponent<SaveManager>();
-        time = System.DateTime.Now.Hour;  
     }
     void Update()
     {
         ChooseCat();
         ChooseSpawnPoint();
         SpawnCat();
+
+        if (Input.GetKey(KeyCode.Space)) cooldown = 0; //Hack
     }
     private void ChooseCat()
     {
         if (!isDone)
         {
+            randomNum = Random.Range(1, 101);
             foreach (var cat in cats)
             {
-                if (time >= cat.GetComponent<Cat>().cat.timeIn && time < cat.GetComponent<Cat>().cat.timeOut) chosenCats.Add(cat);
+                if (randomNum <= cat.GetComponent<Cat>().cat.spawnRate) chosenCats.Add(cat);
             }
         }
 
@@ -71,18 +74,21 @@ public class SpawnController : MonoBehaviour
 
             if (chosenCats.Count == 0) return;
             else
-            {
-
+            { 
                 int randomCat = Random.Range(0, chosenCats.Count);
 
                 if (chosenSpawn.GetComponent<Spawn>().cat == null)
                 {
+                    
                     GameObject chosenCat = Instantiate(chosenCats[randomCat], chosenSpawn.transform.position, chosenSpawn.transform.rotation);
+                    chosenCats.RemoveAt(randomCat);
+
                     catManager.AddCatToList(chosenCat);
                     saveManager.SaveCat();
                     saveManager.LoadCat();
+
                     chosenCat.transform.SetParent(Bedroom.transform);
-                    
+                   
                     chosenSpawn.GetComponent<Spawn>().cat = chosenCat;
                     chosenSpawn = null;
                 }

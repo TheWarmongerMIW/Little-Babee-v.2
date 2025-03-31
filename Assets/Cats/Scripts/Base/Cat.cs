@@ -31,6 +31,8 @@ public class Cat : MonoBehaviour, IPointerDownHandler
     {
         Leave();
         if (!isChanging) StartCoroutine(ToIdle());
+
+        if (Input.GetKey(KeyCode.Backspace)) stayTime = 0;
     }
 
     private void Leave()

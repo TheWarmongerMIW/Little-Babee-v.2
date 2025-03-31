@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7ec07f8183edfe34f9a235596e58007b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 642bd8a59cd5a674b8658a1e836fa6a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3, y: 0.27}
+  m_Size: {x: 0.42857143, y: 0.3857143}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -153,7 +153,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.42857143, y: 0.3857143}
-    newSize: {x: 0.3, y: 0.27}
+    newSize: {x: 0.42857143, y: 0.3857143}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -201,6 +201,25 @@ MonoBehaviour:
   stayTime: 0
   cat: {fileID: 11400000, guid: 3603759d2c6c28745ab11e77354c0e58, type: 2}
   hasFound: 0
+  spriteRenderer: {fileID: 0}
+  sprites:
+  - {fileID: 21300000, guid: 642bd8a59cd5a674b8658a1e836fa6a6, type: 3}
+  - {fileID: 21300000, guid: adcefd65bda940e47aa6e1acfbc367c7, type: 3}
+  - {fileID: 21300000, guid: fad6e92b5f1e312439f5970e8a153620, type: 3}
+  - {fileID: 21300000, guid: 21b54639adefd2744a8cb347d0fe7078, type: 3}
+  - {fileID: 21300000, guid: 92eafa91009a95d489610c0f6005625e, type: 3}
+  - {fileID: 21300000, guid: 23555652f7673a84d8fa7cc89b451d59, type: 3}
+  - {fileID: 21300000, guid: 3d3699db2532f384984df8c3c9c00c70, type: 3}
+  - {fileID: 21300000, guid: 246201d34cab69c418583ad17b1b51fd, type: 3}
+  - {fileID: 21300000, guid: d03ed6c179923e6429c065e91ea3ecc1, type: 3}
+  - {fileID: 21300000, guid: 9bb0ee9da7d667a4982fe63d7caa70ca, type: 3}
+  - {fileID: 21300000, guid: 872b5715474bd684c8069733509bbf98, type: 3}
+  - {fileID: 21300000, guid: 3ec3023f98eeefc4484f0b4d094888c7, type: 3}
+  - {fileID: 21300000, guid: 26604bdea320c884ba3ca073f19af19c, type: 3}
+  - {fileID: 21300000, guid: ca6c91219fe1306479a78844f21192c7, type: 3}
+  - {fileID: 21300000, guid: 7210b12bc86842a49a6606a96f6d27c4, type: 3}
+  - {fileID: 21300000, guid: 55048ec676b458e49aaaa63b4ca5f857, type: 3}
+  - {fileID: 21300000, guid: 85908f972a2145b45a88f0a68aa16b42, type: 3}
   delay: 2
 --- !u!1 &4358607457554580718
 GameObject:
@@ -228,8 +247,8 @@ Transform:
   m_GameObject: {fileID: 4358607457554580718}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.049, y: -0.151, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.032, y: -0.16, z: 0}
+  m_LocalScale: {x: 1.274, y: 1.274, z: 1.274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6985403532081005467}
