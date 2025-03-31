@@ -8,7 +8,11 @@ public class OrangeCat : Cat
     [SerializeField] private BoxCollider2D boxCollider;
     public OrangeCat()
     {
-        hasToChange = false;
+
+    }
+    public void Start()
+    {
+        boxCollider = GetComponent<BoxCollider2D>();
     }
     private void FixedUpdate()
     {

@@ -7,6 +7,7 @@ public class SaveManager : MonoBehaviour
 {
     [SerializeField] private CatManager catManager;
     [SerializeField] private RawImage rawImage;
+    [SerializeField] private List<RawImage> rawImages = new List<RawImage>();   
 
     private void Start()
     {
@@ -26,10 +27,18 @@ public class SaveManager : MonoBehaviour
 
         foreach (var name in catManager.catNames)
         {
-            if (rawImage.GetComponent<Image>().needCatImage == name)
+            //if (rawImage.GetComponent<Image>().catName == name)
+            //{
+            //    rawImage.color = Color.white;
+            //    break;
+            //}
+            foreach (var rawImage in rawImages)
             {
-                rawImage.color = Color.white;
-                break;
+                if (rawImage.GetComponent<Image>().catName == name)
+                {
+                    rawImage.color = Color.white;
+                    break;
+                }
             }
         }
     }

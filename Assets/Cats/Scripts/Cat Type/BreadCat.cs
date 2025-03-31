@@ -6,6 +6,6 @@ public class BreadCat : Cat
 {
     public BreadCat()
     {
-        hasToChange = false;
+
     }
 }

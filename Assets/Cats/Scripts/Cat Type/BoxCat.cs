@@ -6,6 +6,5 @@ public class BoxCat : Cat
 {
     public BoxCat()
     {
-        hasToChange = false;
     }
 }

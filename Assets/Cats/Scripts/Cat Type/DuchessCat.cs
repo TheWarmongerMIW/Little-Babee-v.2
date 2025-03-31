@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DuchessCat : Cat
 {
-    public DuchessCat()
+    private void Start()
     {
-        hasToChange = true;
-    }    
+        changeToIdle = true;
+    }
 }

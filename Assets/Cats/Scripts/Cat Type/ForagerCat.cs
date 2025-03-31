@@ -6,6 +6,6 @@ public class ForagerCat : Cat
 { 
     public ForagerCat()
     {
-        hasToChange = false;
+
     }
 }

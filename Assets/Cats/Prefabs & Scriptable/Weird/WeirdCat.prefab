@@ -197,11 +197,11 @@ MonoBehaviour:
   animator: {fileID: 0}
   currentState: 
   isChanging: 0
-  hasToChange: 0
+  changeToIdle: 0
   stayTime: 0
   cat: {fileID: 11400000, guid: 3603759d2c6c28745ab11e77354c0e58, type: 2}
   hasFound: 0
-  spriteRenderer: {fileID: 5134071808880349199}
+  delay: 2
 --- !u!1 &4358607457554580718
 GameObject:
   m_ObjectHideFlags: 0

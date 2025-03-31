@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class Image : MonoBehaviour
 {
-    [SerializeField] public string needCatImage;
+    [SerializeField] public string catName;
     [SerializeField] private CatData catData;
     [SerializeField] private RawImage rawImage;
     void Start()
@@ -24,7 +24,7 @@ public class Image : MonoBehaviour
     {
         foreach (var name in catData.catNames)
         {
-            if (needCatImage == name)
+            if (catName == name)
             {
                 rawImage.color = Color.white;
                 break;

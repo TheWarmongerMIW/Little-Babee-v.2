@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class VaseCat : Cat
 {
-    public VaseCat()
+    private void Start()
     {
-
+        changeToIdle = false;
     }
 }

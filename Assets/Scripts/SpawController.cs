@@ -28,7 +28,7 @@ public class SpawnController : MonoBehaviour
 
     void Start()
     {
-        cooldown = /*Random.Range(30,241)*/ 0;
+        cooldown = Random.Range(30, 241);
         catManager = GameObject.Find("Cat Manager").GetComponent<CatManager>();    
         saveManager = GameObject.Find("Save Manager").GetComponent<SaveManager>();
         time = System.DateTime.Now.Hour;  
@@ -80,6 +80,7 @@ public class SpawnController : MonoBehaviour
                     GameObject chosenCat = Instantiate(chosenCats[randomCat], chosenSpawn.transform.position, chosenSpawn.transform.rotation);
                     catManager.AddCatToList(chosenCat);
                     saveManager.SaveCat();
+                    saveManager.LoadCat();
                     chosenCat.transform.SetParent(Bedroom.transform);
                     
                     chosenSpawn.GetComponent<Spawn>().cat = chosenCat;
@@ -91,33 +92,5 @@ public class SpawnController : MonoBehaviour
                 }
             }
         }
-
-        #region 
-        //if (timer < cooldown) timer += Time.deltaTime;
-        //else
-        //{
-        //    timer = 0;
-        //    cooldown = Random.Range(30, 241);
-        //    if (chosenCats.Count == 0) return;
-        //    else
-        //    {
-        //        int randomCat = Random.Range(0, chosenCats.Count);
-
-        //        if (chosenSpawn.GetComponent<Spawn>().haveCat == false)
-        //        {
-        //            GameObject chosenCat = Instantiate(chosenCats[randomCat], chosenSpawn.transform.position, chosenSpawn.transform.rotation);
-        //            chosenCat.transform.SetParent(Bedroom.transform);
-
-        //            chosenSpawn.GetComponent<Spawn>().cat = chosenCat;  
-        //            chosenSpawn.GetComponent<Spawn>().haveCat = true;
-        //            chosenSpawn = null;
-        //        }
-        //        else
-        //        {
-        //            chosenSpawn = null;
-        //        }
-        //    }
-        //}
-        #endregion
     }
 }

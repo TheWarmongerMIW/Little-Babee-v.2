@@ -8,7 +8,7 @@ public class PinkCat : Cat
     [SerializeField] private BoxCollider2D boxCollider;
     public PinkCat()
     {
-        hasToChange = false;    
+        
     }
     private void FixedUpdate()
     {

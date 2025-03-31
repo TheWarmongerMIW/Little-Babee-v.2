@@ -13,7 +13,7 @@ public class Cat : MonoBehaviour, IPointerDownHandler
     [SerializeField] protected Animator animator;
     [SerializeField] protected string currentState;
     [SerializeField] protected bool isChanging = false;
-    [SerializeField] protected bool hasToChange = false;
+    [SerializeField] protected bool changeToIdle = false;
 
     [Header("Cat stay time")]
     [SerializeField] protected float stayTime;
@@ -22,7 +22,7 @@ public class Cat : MonoBehaviour, IPointerDownHandler
     public ScriptableCat cat;
     public bool hasFound = false;
 
-    private void Start()
+    private void Awake()
     {
         animator = GetComponent<Animator>();
         stayTime = UnityEngine.Random.Range(60, 181);
@@ -49,7 +49,7 @@ public class Cat : MonoBehaviour, IPointerDownHandler
         {
             if (animator.HasState(0, Animator.StringToHash("OnEnter")))
             {
-                if (!hasToChange) ToOnEnter();
+                if (!changeToIdle) ToOnEnter();
             }
             else ChangeAnim("Idle");
         }
@@ -65,13 +65,13 @@ public class Cat : MonoBehaviour, IPointerDownHandler
     #endregion
 
     #region Change Animation
-    private void ChangeAnim(string newState)
+    protected void ChangeAnim(string newState)
     {
         if (currentState == newState) return;
         animator.Play(newState);
         currentState = newState;
     }
-    private IEnumerator ToIdle()
+    protected virtual IEnumerator ToIdle()
     {
         isChanging = true;
 
@@ -82,13 +82,10 @@ public class Cat : MonoBehaviour, IPointerDownHandler
                 yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
                 ChangeAnim("Idle");
             }
-            else if (hasToChange)
+            else if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick") && changeToIdle)
             {
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName("OnClick"))
-        {
-                    yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-                    ToOnEnter();
-                }
+                yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+                ToOnEnter();
             }
         }
         else
@@ -102,11 +99,11 @@ public class Cat : MonoBehaviour, IPointerDownHandler
 
         isChanging = false;
     }
-    private void ToOnClick()
+    protected void ToOnClick()
     {
         ChangeAnim("OnClick");
     }
-    private void ToOnEnter()
+    protected void ToOnEnter()
     {
         ChangeAnim("OnEnter");
     }

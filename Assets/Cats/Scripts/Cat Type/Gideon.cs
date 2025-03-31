@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Gideon : Cat
 {
-    public Gideon()
+    private void Start()
     {
-        hasToChange = true;
+        changeToIdle = true;
     }
 }
